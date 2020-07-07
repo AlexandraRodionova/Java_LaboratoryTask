@@ -1,0 +1,42 @@
+package com.company;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner scanner = null;
+        try {
+            FileReader fr = new FileReader("text\\code.txt");
+            scanner = new Scanner(fr);
+            StringBuilder sb = new StringBuilder("");
+            while (scanner.hasNextLine()) {
+                sb.append(scanner.nextLine());
+                sb.append('\n');
+            }
+            
+            try {
+                while (sb.indexOf("")+2);
+                }
+                while (sb.indexOf("
+                    sb.delete(sb.indexOf("
+                try (FileWriter fw = new FileWriter("text\\no comments.txt")) {
+                    fw.write(sb.toString());
+                }catch (IOException e){
+                    System.err.print(e);
+                }
+            } catch (StringIndexOutOfBoundsException e) {
+                System.err.println(e);
+            }
+        } catch (IOException e) {
+
+        } finally {
+            if (scanner != null)
+                scanner.close();
+        }
+        
+    }
+}
